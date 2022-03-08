@@ -48,7 +48,7 @@ about:
   summary: Orbit is a package for bayesian time series modeling and inference.
   license: Apache-2.0
   license_file: LICENSE
-  description: |4
+  description: |
 
     <a href="https://github.com/uber/orbit">
       <img src="https://raw.githubusercontent.com/uber/orbit/dev/docs/img/orbit-banner.png" alt="Orbit banner" />
