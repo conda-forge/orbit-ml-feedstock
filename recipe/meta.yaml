@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/orbit-ml-{{ version }}.tar.gz
-  sha256: dd97ea2ee5324ed9588902b9e999f40803ac7e82a32a629d89c9bdd109ff03cb
+  sha256: 7a8b15661805446ad19239bd33676e43f1d7f73291f108372bcad78f0aeffe8e
 
 build:
   number: 0
