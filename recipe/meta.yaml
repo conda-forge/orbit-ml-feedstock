@@ -19,9 +19,11 @@ requirements:
   host:
     - pip
     - pytest
-    - python >=3.6
+    - python >=3.7, <=3.8
+    - numpy>=1.18.2, <=1.22.2
   run:
-    - python >=3.6
+    - python >=3.7, <=3.8
+    - numpy>=1.18.2, <=1.22.2
     - arviz
     - matplotlib-base >=3.3.2
     - numpy >=1.18.2
