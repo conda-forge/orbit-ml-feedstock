@@ -179,4 +179,4 @@ Feedstock Maintainers
 =====================
 
 * [@sugatoray](https://github.com/sugatoray/)
-
+* [@edwinnglabs](https://github.com/edwinnglabs/)
