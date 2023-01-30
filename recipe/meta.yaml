@@ -13,7 +13,9 @@ source:
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: 
+    - TBB_CXX_TYPE=gcc
+    - {{ PYTHON }} -m pip install . -vv
   entry_points:
     - install_cmdstan = cmdstanpy.install_cmdstan:main
     - install_cxx_toolchain = cmdstanpy.install_cxx_toolchain:main
