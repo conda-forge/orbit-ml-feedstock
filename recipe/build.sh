@@ -1,6 +1,5 @@
 echo "Set CXX TYPE"
 STAN_MPI=true
-CXX=mpicxx
 TBB_CXX_TYPE=gcc
 echo "Print python version"
 python -c "import sys; print(sys.version)"
