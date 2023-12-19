@@ -10,13 +10,13 @@ source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/orbit-ml-{{ version }}.tar.gz
   sha256: 5843f7748036f39bb4d95af07aadca5e8a2f5f2de6f5eda16cf4a73ad8cc3bb3
 
-# build:
-#   number: 0
-#   noarch: python
-# script: 
-#   - TBB_CXX_TYPE=gcc
-#   - python -c "import sys; print(sys.version)"
-#   - {{ PYTHON }} -m pip install . -vv
+build:
+  number: 0
+  noarch: python
+script: 
+  - TBB_CXX_TYPE=gcc
+  - python -c "import sys; print(sys.version)"
+  - {{ PYTHON }} -m pip install . -vv
 # entry_points:
 #   - install_cmdstan = cmdstanpy.install_cmdstan:main
 #   - install_cxx_toolchain = cmdstanpy.install_cxx_toolchain:main
