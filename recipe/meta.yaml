@@ -25,11 +25,12 @@ requirements:
   host:
     - pip
     - pytest
-    - python >=3.7, <= 3.9
+    - python >=3.8, <= 3.12
     - numpy >=1.18.2
     - cmdstanpy >=1.0.4
+    - importlib_resources
   run:
-    - python >=3.7
+    - python >=3.8
     - numpy >=1.18
     - pandas >=1.0.3
     - matplotlib-base >=3.3.2
@@ -41,7 +42,7 @@ requirements:
     - statsmodels >=0.11.1
     - arviz
     - tqdm >=4.36.1
-
+    - importlib_resources
 
 test:
   imports:
