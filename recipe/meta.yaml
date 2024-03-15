@@ -1,7 +1,6 @@
 {% set name = "orbit-ml" %}
 {% set version = "1.1.4.4" %}
 
-
 package:
   name: {{ name|lower }}
   version: {{ version }}
@@ -13,11 +12,10 @@ source:
 build:
   number: 1
   noarch: python
-
-script:
-  - TBB_CXX_TYPE=gcc
-  - python -c "import sys; print(sys.version)"
-  - {{ PYTHON }} -m pip install . -vv
+  script:
+    - TBB_CXX_TYPE=gcc
+    - python -c "import sys; print(sys.version)"
+    - {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -94,4 +92,3 @@ extra:
   recipe-maintainers:
     - edwinnglabs
     - sugatoray
-
