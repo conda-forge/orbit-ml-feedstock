@@ -11,15 +11,13 @@ source:
   sha256: 3ec0979f5a691e0e8dbd64ec65009a075bc28efa95ad9bbde2d9fcb6b735afef
 
 build:
-  number: 0
+  number: 1
   noarch: python
+
 script:
   - TBB_CXX_TYPE=gcc
   - python -c "import sys; print(sys.version)"
   - {{ PYTHON }} -m pip install . -vv
-# entry_points:
-#   - install_cmdstan = cmdstanpy.install_cmdstan:main
-#   - install_cxx_toolchain = cmdstanpy.install_cxx_toolchain:main
 
 requirements:
   host:
@@ -96,5 +94,4 @@ extra:
   recipe-maintainers:
     - edwinnglabs
     - sugatoray
-    # maintainers from upstream repository
-    - edwinnglabs
+
