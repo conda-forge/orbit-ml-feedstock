@@ -1,6 +1,5 @@
 {% set name = "orbit-ml" %}
-{% set version = "1.1.4.2" %}
-
+{% set version = "1.1.4.4" %}
 
 package:
   name: {{ name|lower }}
@@ -8,28 +7,22 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/orbit-ml-{{ version }}.tar.gz
-  sha256: 5843f7748036f39bb4d95af07aadca5e8a2f5f2de6f5eda16cf4a73ad8cc3bb3
+  sha256: 3ec0979f5a691e0e8dbd64ec65009a075bc28efa95ad9bbde2d9fcb6b735afef
 
 build:
-  number: 0
+  number: 1
   noarch: python
-script: 
-  - TBB_CXX_TYPE=gcc
-  - python -c "import sys; print(sys.version)"
-  - {{ PYTHON }} -m pip install . -vv
-# entry_points:
-#   - install_cmdstan = cmdstanpy.install_cmdstan:main
-#   - install_cxx_toolchain = cmdstanpy.install_cxx_toolchain:main
 
 requirements:
   host:
     - pip
     - pytest
-    - python >=3.7, <= 3.9
+    - python >=3.8, <= 3.12
     - numpy >=1.18.2
     - cmdstanpy >=1.0.4
+    - importlib_resources
   run:
-    - python >=3.7
+    - python >=3.8
     - numpy >=1.18
     - pandas >=1.0.3
     - matplotlib-base >=3.3.2
@@ -41,7 +34,7 @@ requirements:
     - statsmodels >=0.11.1
     - arviz
     - tqdm >=4.36.1
-    
+    - importlib_resources
 
 test:
   imports:
@@ -57,7 +50,7 @@ about:
   summary: Orbit is a package for bayesian time series modeling and inference.
   license: Apache-2.0
   license_file: LICENSE
-  description: |
+  description: |2
 
     <a href="https://github.com/uber/orbit">
       <img src="https://raw.githubusercontent.com/uber/orbit/dev/docs/img/orbit-banner.png" alt="Orbit banner" />
@@ -95,5 +88,3 @@ extra:
   recipe-maintainers:
     - edwinnglabs
     - sugatoray
-    # maintainers from upstream repository
-    - edwinnglabs
