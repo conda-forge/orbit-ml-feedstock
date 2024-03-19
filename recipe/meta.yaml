@@ -10,8 +10,7 @@ source:
   sha256: 3ec0979f5a691e0e8dbd64ec65009a075bc28efa95ad9bbde2d9fcb6b735afef
 
 build:
-  number: 1
-  noarch: python
+  number: 2
 
 requirements:
   host:
@@ -22,7 +21,7 @@ requirements:
     - cmdstanpy >=1.0.4
     - importlib_resources
   run:
-    - python >=3.8
+    - python
     - numpy >=1.18
     - pandas >=1.0.3
     - matplotlib-base >=3.3.2
