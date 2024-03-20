@@ -1,5 +1,5 @@
 {% set name = "orbit-ml" %}
-{% set version = "1.1.4.4" %}
+{% set version = "1.1.4.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/orbit-ml-{{ version }}.tar.gz
-  sha256: 3ec0979f5a691e0e8dbd64ec65009a075bc28efa95ad9bbde2d9fcb6b735afef
+  sha256: ab7b16a885bfeb3d5b119e16bc55ccd920003e8f848111a63f9f3e46267c209b
 
 build:
-  number: 1
+  number: 0
   noarch: python
 
 requirements:
