@@ -1,3 +1,4 @@
+echo "Execute the post link script here."
 echo "List files to be prune:"
 find ./orbit/stan/ -type f ! -name "*.stan"
 echo "Prune these files."
