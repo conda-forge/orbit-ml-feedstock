@@ -7,6 +7,8 @@ echo "Print platform"
 python -c "import platform; print(platform.platform())"
 echo "Install pacakge."
 $PYTHON -m pip install . -vv
-echo "Prune compiled files."
+echo "List files to be prune:"
+find ./orbit/stan/ -type f ! -name "*.stan"
+echo "Prune these files."
 find ./orbit/stan/ -type f ! -name "*.stan" -delete
 echo "Finished installation. Exit from build.sh."
