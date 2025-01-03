@@ -6,23 +6,23 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/orbit-ml-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/orbit-ml-{{ version }}.tar.gz
   sha256: 870dfd75384b942be88d34bc564730c741058716cb9d1348cc420faca381b413
 
 build:
-  number: 0
+  number: 1
   noarch: python
 
 requirements:
   host:
     - pip
     - pytest
-    - python >=3.8, <= 3.12
+    - python {{ python_min }}
     - numpy >=1.18.2
     - cmdstanpy >=1.0.4
     - importlib_resources
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - numpy >=1.18
     - pandas >=1.0.3
     - matplotlib-base >=3.3.2
@@ -44,6 +44,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://orbit-ml.readthedocs.io/en/stable/
